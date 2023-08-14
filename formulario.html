@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario de ejemplo</title>
+  <link rel="stylesheet" type="text/css" href="formulario.css">
+</head>
+<body>
+  <h2>Formulario de ejemplo</h2>
+  
+  <form id="myForm">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+    
+    <label>Género:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Masculino</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Femenino</label>
+    
+    <label for="interests">Intereses:</label>
+    <input type="checkbox" id="programming" name="interests" value="programming">
+    <label for="programming">Programación</label>
+    <input type="checkbox" id="music" name="interests" value="music">
+    <label for="music">Música</label>
+    
+    <label for="birthday">Fecha de nacimiento:</label>
+    <input type="date" id="birthday" name="birthday" required>
+    
+    <label for="message">Mensaje:</label>
+    <textarea id="message" name="message" required></textarea>
+    
+    <button type="submit">Enviar</button>
+  </form>
+  
+  <script src="formulario.js"></script>
+</body>
+</html>

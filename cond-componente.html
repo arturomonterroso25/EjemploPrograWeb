@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mostrar elementos condicionalmente</title>
+</head>
+<body>
+  <button onclick="mostrarElemento()">Mostrar/Ocultar Elemento</button>
+  <div id="elemento-oculto" style="display: block;">
+    <!-- Contenido del elemento que se muestra condicionalmente -->
+    <p>Este es el elemento que no está oculto.</p>
+  </div>
+  
+  <script>
+    function mostrarElemento() {
+      var elemento = document.getElementById('elemento-oculto');
+      if (elemento.style.display === 'none') {
+        elemento.style.display = 'block'; // Mostrar el elemento
+      } else {
+        elemento.style.display = 'none';  // Ocultar el elemento
+      }
+    }
+  </script>
+</body>
+</html>

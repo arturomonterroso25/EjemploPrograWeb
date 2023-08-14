@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario con Componente Condicional</title>
+</head>
+<body>
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+    
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" required>
+    <br>
+
+    <div id="direccionComponente" style="display: none;">
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion">
+      <br>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    var edadInput = document.getElementById('edad');
+    var direccionComponente = document.getElementById('direccionComponente');
+
+    edadInput.addEventListener('input', function() {
+      var edad = parseInt(edadInput.value);
+      if (edad >= 18) {
+        direccionComponente.style.display = 'block';
+      } else {
+        direccionComponente.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

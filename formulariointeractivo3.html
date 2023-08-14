@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modificar valor numérico</title>
+</head>
+<body>
+    <form>
+        <label for="numero">Ingrese un número:</label>
+        <input type="number" id="numero" name="numero" /> <!-- El atributo "id" es de donde toma la variable -->
+        <button type="button" onclick="modificarValor()">Modificar con suma</button>
+        <button type="button" onclick="modificarValor2()">Modificar con resta</button>
+    </form>
+
+    <h1>El valor ingresado es: <span id="valorMostrado"></span></h1>
+
+    <script>
+        function modificarValor() {
+            // Obtener el valor ingresado por el usuario
+            // parse es una funcion que nos ayuda a transformar especificamente
+            // en un tipo de dato. En este caso, float
+            var valorIngresado = parseFloat(document.getElementById("numero").value);
+            
+            // Realizar la modificación (por ejemplo, incrementar el valor en 10)
+            var valorModificado = valorIngresado + 10;
+
+            //Se transforma la variable en un valor string
+            valorIngresado.toString();
+
+            // Mostrar el valor modificado en la página
+            document.getElementById("valorMostrado").textContent = valorModificado;
+        }
+        function modificarValor2() {
+            // Obtener el valor ingresado por el usuario
+            var valorIngresado = parseFloat(document.getElementById("numero").value);
+
+            // Realizar la modificación (por ejemplo, incrementar el valor en 10)
+            var valorModificado = valorIngresado - 10;
+
+            // Mostrar el valor modificado en la página
+            document.getElementById("valorMostrado").textContent = valorModificado;
+        }
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
